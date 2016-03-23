@@ -1,0 +1,9 @@
+<h1>Animals#view_animals</h1>
+<p>Find me in app/views/animals/view_animals.html.erb</p>
+
+class AnimalsController < ApplicationController
+ def view_animal
++   @animals = Animal.all
+  end  
+
+def create_animal

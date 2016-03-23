@@ -1,0 +1,12 @@
+<h1> this is cats: <%= @cats_in_html %> </h1>
+<div>
+  <%= while (@cats_in_html != 0)do %>
+   <img src="https://i.ytimg.com/vi/icqDxNab3Do/maxresdefault.jpg"/>
+
+    <h1>cats number: <%= @cats_in_html %></h1>
+  <% @cats_in_html = @cats_in_html - 1
+      end %> 
+
+</div>
+
+<h1>  <%= @warning %> </h1>

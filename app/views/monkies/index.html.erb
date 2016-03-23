@@ -1,0 +1,13 @@
+<h1>This many monkies: <%= @monkies_in_html %> </h1>
+
+<div>
+  <%= while (@monkies_in_html != 0) do %>
+      <img src="http://2.bp.blogspot.com/-SixL4GAKA_o/Utvqd1YoeiI/AAAAAAAABlQ/IuP3uJF8C2I/s1600/Funny-Monkey-Pictures-1024x640.jpg"/>
+      <h1>monkies number: <%= @monkies_in_html %></h1>
+  <% @monkies_in_html = @monkies_in_html - 1
+      end %> 
+
+</div>
+
+<h1>  <%= @warning %> </h1>
+

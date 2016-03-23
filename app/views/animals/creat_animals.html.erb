@@ -1,0 +1,9 @@
+<h1>Animals#creat_animals</h1>
+<p>Find me in app/views/animals/creat_animals.html.erb</p>
+
+<%= form_for @animal, url: {action: "save_animal"} do |f| %>
+  <%= f.text:field :name %>
+  <%= f.text_field :image %>
+  <%= f.submit "Create" %>
+
+ <% end %> 

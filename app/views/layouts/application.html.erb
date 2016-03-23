@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <title>
+    my webpage
+  </title>
+
+
+
+</head>
+<body>
+
+   <header>
+
+      <h1> MY PAGE</h1>
+      <nav>
+            <ul>
+               <li><a href="/sport"> sport </a></li>
+               <li><a href="/aboutme">aboutme </a></li>
+               <li><a href="/hobbies"> hobbies </a></li>
+               <li><a href="/cats"> cats </a></li>
+               <li><a href="/monkies"> monkies </a></li>
+            </ul>
+      </nav>
+   </header>
+
+<%= yield %>
+
+
+       <a href="http://www.google.com">google</a>
+
+
+
+      <footer> 
+              *My Site   
+
+      </footer>
+
+
+
+</body>
+</html>
