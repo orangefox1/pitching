@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'animals/view_animals'
 
   get 'animals/creat_animals'
+  post 'animals/creat_animals'
 
   get 'monkies/index'
 
