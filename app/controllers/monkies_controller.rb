@@ -17,7 +17,7 @@ class MonkiesController < ApplicationController
   end
 
   def create
-    @monkey=Monkey.new(params)
+    @monkey = Monkey.new
     permitted_params = params.require(:monkey).permit(:name, :weight)
     if @monkey.save
       render :action =>"new"
