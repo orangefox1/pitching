@@ -22,9 +22,10 @@ Rails.application.routes.draw do
   post "user/save_user"
 
   get "user/view_user"
-
+  get "monkies/list"
   get "user/vie_user"
-
+  post "monkies/create"
+  get 'monkies/new'
   get "monkies" => "monkies#index"
   get "monkies/:number_of_monkies" => "monkies#index"
 
@@ -34,7 +35,7 @@ Rails.application.routes.draw do
 
   get "user/view_user"
 
-  get "user/vie_user"
+  get "user/view_user"
 
   get "cats" => "cats#index"
   get "cats/:number_of_cats" => "cats#index"
