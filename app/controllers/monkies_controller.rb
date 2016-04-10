@@ -28,6 +28,9 @@ class MonkiesController < ApplicationController
 
   def list
   	@list=Monkey.all
-
   end
+
+  	def list_monkey
+  		monkey_name=params[:name_of_monkies]
+	end
 end
