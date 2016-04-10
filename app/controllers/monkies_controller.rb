@@ -11,23 +11,26 @@ class MonkiesController < ApplicationController
 
     end
   end
+
+
+
   def new
-    @monkey = Monkey.new
+    @monkey=Monkey.new
   end
 
   def create
+    @monkey = Monkey.new
     permitted_params = params.require(:monkey).permit(:name, :weight)
-
-    @monkey = Monkey.new(permitted_params)
-
     if @monkey.save
-      redirect_to :action => 'list'
+      render :action =>"new"
     else
-      render :action => 'new'
+      render :action =>"new"
+
     end
   end
 
   def list
+
   	puts@list
     @list = Monkey.all
   end
@@ -37,8 +40,12 @@ class MonkiesController < ApplicationController
     puts "this is the name of the monkey"
     puts monkey_name
 
-  end
-
+  end 
 end
+
+  
+  
+
+
 
 
