@@ -1,7 +1,7 @@
 class MonkiesController < ApplicationController
-  def index 
+  def index
 
-  	monkies_integer = params[:number_of_monkies].to_i
+    monkies_integer = params[:number_of_monkies].to_i
     @monkies_in_html = 0
 
     if monkies_integer < 100
@@ -11,4 +11,34 @@ class MonkiesController < ApplicationController
 
     end
   end
+  def new
+    @monkey = Monkey.new
+  end
+
+  def create
+    permitted_params = params.require(:monkey).permit(:name, :weight)
+
+    @monkey = Monkey.new(permitted_params)
+
+    if @monkey.save
+      redirect_to :action => 'list'
+    else
+      render :action => 'new'
+    end
+  end
+
+  def list
+  	puts@list
+    @list = Monkey.all
+  end
+
+  def list_monkey
+    monkey_name=params[:name_of_monkey]
+    puts "this is the name of the monkey"
+    puts monkey_name
+
+  end
+
 end
+
+

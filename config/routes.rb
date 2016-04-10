@@ -26,7 +26,15 @@ Rails.application.routes.draw do
   get "user/vie_user"
 
   get "monkies" => "monkies#index"
+
+  get 'monkies/new'
+  get 'monkies/list' 
+  get 'monkies/list/:name_of_monkies'=> "monkies#index"
+
+  post "monkies/create"
+
   get "monkies/:number_of_monkies" => "monkies#index"
+
 
 
   get "user/save_user"
@@ -39,6 +47,7 @@ Rails.application.routes.draw do
   get "cats" => "cats#index"
   get "cats/:number_of_cats" => "cats#index"
 
+get "monkies/list"
 
 
 
